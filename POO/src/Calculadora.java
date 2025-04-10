@@ -12,12 +12,8 @@ public class Calculadora {
         num1 = sc.nextDouble();
         System.out.println("Digite o segundo valor: ");
         num2 = sc.nextDouble();
-        System.out.println("Digite o tipo de calculo: ");
-        System.out.println("1- Adição");
-        System.out.println("2- Subtracao");
-        System.out.println("3- Multiplicacao");
-        System.out.println("4- Divisao");
-        tipoCalculo = sc.nextInt();
+
+        tipoCalculo = opcaoCalculo();
 
         if ( tipoCalculo == 1 ){
             System.out.println("A soma é " + num1 + " + " + num2 + " = " + (num1 + num2));
@@ -29,4 +25,16 @@ public class Calculadora {
             System.out.println("A divisão é " + num1 + " / " + num2 + " = " + (num1 / num2));
         }
     }
+
+    public static int opcaoCalculo (){
+        System.out.println("Digite o tipo de calculo: ");
+        System.out.println("1- Adição");
+        System.out.println("2- Subtracao");
+        System.out.println("3- Multiplicacao");
+        System.out.println("4- Divisao");
+
+        int tipoCalculo = sc.nextInt();
+        return tipoCalculo;
+    }
+
 }
